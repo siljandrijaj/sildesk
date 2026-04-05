@@ -120,7 +120,11 @@ All external requests are made directly from the user's browser. No data passes 
 
 ## License
 
-MIT — feel free to fork and build on top of Sildesk.
+© 2026 siljandrijaj. All rights reserved.
+
+This source code is made available for transparency and review purposes only.  
+No part of this code may be copied, modified, distributed or published  
+without explicit written permission from the author.
 
 ---
 
