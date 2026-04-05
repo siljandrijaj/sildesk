@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sildesk – Datenschutzerklärung</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:680px;margin:60px auto;padding:0 24px;color:#1a1a1a;line-height:1.7}
+h1{font-size:24px;margin-bottom:8px}
+h2{font-size:16px;margin-top:32px;margin-bottom:6px}
+p,li{font-size:15px;color:#333}
+ul{padding-left:20px}
+.meta{color:#888;font-size:13px;margin-bottom:40px}
+code{background:#f0f0f0;padding:1px 5px;border-radius:4px;font-size:13px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+th{text-align:left;padding:8px 10px;background:#f5f5f5;border-bottom:2px solid #ddd}
+td{padding:7px 10px;border-bottom:1px solid #eee;vertical-align:top}
+td:first-child{font-weight:500;white-space:nowrap}
+</style>
+</head>
+<body>
+<h1>Datenschutzerklärung</h1>
+<p class="meta">Zuletzt aktualisiert: April 2026</p>
+
+<h2>Überblick</h2>
+<p>Sildesk ist eine Browser-Erweiterung für den neuen Tab. Diese Erklärung beschreibt transparent, welche Daten gespeichert werden und welche externen Dienste bei aktivierten Funktionen kontaktiert werden.</p>
+
+<h2>Lokale Datenspeicherung</h2>
+<ul>
+  <li>Alle Dashboard-Daten (Karten, Boards, Design-Einstellungen) werden ausschließlich lokal in <code>browser.storage.local</code> gespeichert.</li>
+  <li>Es werden keine Daten an den Entwickler übermittelt.</li>
+  <li>Es gibt keine Analyse, kein Tracking und keine Telemetrie.</li>
+</ul>
+
+<h2>Externe Dienste</h2>
+<p>Die folgenden externen Dienste werden <strong>nur dann kontaktiert</strong>, wenn die jeweilige Funktion aktiv genutzt wird. Alle Anfragen werden direkt von deinem Browser gestellt — kein Proxy, kein Umweg über Server des Entwicklers.</p>
+
+<table>
+  <tr><th>Dienst</th><th>Zweck</th><th>Wann</th></tr>
+  <tr><td>Google Favicon Service<br/><code>t0/t1/t2/t3.gstatic.com</code></td><td>Icons für gespeicherte Links</td><td>Beim Anzeigen von Link-Karten</td></tr>
+  <tr><td>ipwho.is</td><td>Öffentliche IP-Adresse, Land, Stadt, ISP</td><td>IP-Anzeige in Kopfzeile aktiviert</td></tr>
+  <tr><td>ip-api.com</td><td>Öffentliche IP-Adresse, Land, Stadt, ISP (Fallback)</td><td>IP-Anzeige in Kopfzeile aktiviert</td></tr>
+  <tr><td>api.ipify.org</td><td>Öffentliche IP-Adresse (letzter Fallback)</td><td>IP-Anzeige in Kopfzeile aktiviert</td></tr>
+  <tr><td>speed.cloudflare.com</td><td>Download- und Upload-Geschwindigkeit, Ping</td><td>Speedtest-Widget genutzt</td></tr>
+  <tr><td>api.open-meteo.com<br/>geocoding-api.open-meteo.com</td><td>Wetterdaten und Stadtsuche</td><td>Wetter-Widget oder Wetter-Anzeige aktiviert</td></tr>
+  <tr><td>nominatim.openstreetmap.org</td><td>Stadtname aus GPS-Koordinaten</td><td>GPS-Standort für Wetter verwendet</td></tr>
+  <tr><td>api.coingecko.com</td><td>Krypto- und Aktien-Kurse</td><td>Aktien &amp; Crypto Widget genutzt</td></tr>
+  <tr><td>www.openligadb.de</td><td>Fußball-Ergebnisse und Tabellen</td><td>Fußball-Widget genutzt</td></tr>
+  <tr><td>api.qrserver.com</td><td>QR-Code-Generierung</td><td>QR-Code-Widget genutzt</td></tr>
+  <tr><td>api.github.com (gist)</td><td>Einstellungs-Synchronisation</td><td>GitHub Gist Sync aktiviert und Token eingegeben</td></tr>
+  <tr><td>api.allorigins.win<br/>corsproxy.io</td><td>RSS-Feed-Proxy (CORS-Umgehung)</td><td>RSS-Widget mit nicht CORS-fähiger Feed-URL</td></tr>
+</table>
+
+<h2>Optionale Synchronisation (GitHub Gist)</h2>
+<p>Wenn du GitHub Gist Sync aktivierst, wird deine Konfiguration in einem von dir erstellten privaten GitHub Gist gespeichert. Dein persönlicher GitHub-Token wird ausschließlich lokal in <code>browser.storage.local</code> gespeichert und niemals an Dritte übermittelt.</p>
+
+<h2>Berechtigungen</h2>
+<ul>
+  <li><code>storage</code> / <code>unlimitedStorage</code> — Lokales Speichern der Konfiguration</li>
+  <li><code>tabs</code> — Browser-Verlauf-Widget und Board-Wechsel</li>
+  <li><code>history</code> — Anzeige zuletzt besuchter Seiten im History-Widget</li>
+  <li><code>alarms</code> — Automatische RSS-Aktualisierung alle 30 Minuten</li>
+  <li><code>dns</code> — Ermittlung der lokalen IP-Adresse über DNS-Auflösung</li>
+  <li><code>&lt;all_urls&gt;</code> — Notwendig für externe API-Anfragen aus dem Background-Script (Speedtest, IP-Abruf, Wetter etc.) ohne CORS-Einschränkungen</li>
+</ul>
+
+<h2>Kontakt</h2>
+<p>Bei Fragen zur Datenschutzerklärung kannst du den Entwickler über die Firefox Add-ons Seite kontaktieren.</p>
+</body>
+</html>
